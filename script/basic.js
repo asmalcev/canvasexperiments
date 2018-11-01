@@ -28,6 +28,10 @@ function getRandomInteger(min, max) {
   return Math.random() * (max - min) + min
 }
 
+function distance(x1, y1, x2, y2, r1 = 0, r2 = 0) {
+	return Math.pow(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2), .5) - r1 - r2
+}
+
 function animate() {
 	let gradient = c.createLinearGradient(0, 0, canvas.width, canvas.height)
 	gradient.addColorStop(0, '#1E323C' + opacity)

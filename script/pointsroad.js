@@ -5,7 +5,7 @@ let center = {
 
 class circleLine {
 	constructor() {
-		this.distanceFromCenter = Math.floor(Math.random() * 20 - 10)
+		this.distanceFromCenter = Math.floor(Math.random() * 20)
 		this.color = getRandomColor()
 
 		this.radians = Math.random() * Math.PI * 2
@@ -30,7 +30,7 @@ class circleLine {
 		this.y = center.y + Math.sin(this.radians) * this.distanceFromCenter
 
 		if (this.x > canvas.width || this.x < 0 || this.y < 0 || this.y > canvas.height)
-			this.distanceFromCenter = Math.floor(Math.random() * 20 - 10)
+			this.distanceFromCenter = Math.floor(Math.random() * 20)
 
 		this.draw()
 	}
